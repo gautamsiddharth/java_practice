@@ -1,6 +1,7 @@
 package day2;
 
-public class student {
+public class Student {
+
 
     // name
     // phoneNumber
@@ -16,7 +17,7 @@ public class student {
     // socialSecurityNumber
 
 
-    String name;
+    public String name;
     String phoneNumber;
     String dob;
     String sClass;
@@ -28,6 +29,35 @@ public class student {
     String password;
     String emergencyContactNumber;
     String SocialSecurityNumber;
+
+
+    public void playing(){
+        System.out.println("Student is playing");
+    }
+
+
+    public static void main(String[] args) {
+        Student student1 = new Student(); // Student object
+
+        student1.name = "Sid";
+        System.out.println(student1.name);
+        student1.playing();
+
+
+
+        Student student2 = new Student();
+        student2.name = "Ram";
+
+
+
+
+    }
+
+
+
+
+
+
 
 
 

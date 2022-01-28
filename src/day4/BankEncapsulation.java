@@ -9,7 +9,7 @@ public class BankEncapsulation {
      //   account1.accountHolderName = "Sid";
         account1.setAccountHolderName("Sid");
       //  account1.accountBalance = 500;
-        account1.setAccountBalance(500);
+        account1.deposit(account1, 500);
 
 
 
@@ -17,7 +17,7 @@ public class BankEncapsulation {
         Account account2 = new Account();
         account2.setAccountNumber("2");
         account2.setAccountHolderName("Ram");
-        account2.setAccountBalance(1000);
+        account2.deposit(account1, 1000);
 
 
         System.out.println(" ************  Before Transfer ************");

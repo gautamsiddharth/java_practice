@@ -27,15 +27,16 @@ public class Account {
           return accountBalance;
      }
 
-     public void setAccountBalance(double accountBalance) {
+     private void setAccountBalance(double accountBalance) {
           this.accountBalance = accountBalance;
      }
 
 
      //deposit
-// TODO
 
-
+    public void deposit(Account account, double amount){
+         this.accountBalance += amount;
+    }
      //transfer balance
 
      public  void transferBalance( Account fromaccount, Account toaccount , double amountToBeTransfered){

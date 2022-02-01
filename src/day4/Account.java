@@ -34,28 +34,41 @@ public class Account {
 
      //deposit
 
-    public void deposit(Account account, double amount){
-         this.accountBalance += amount;
-    }
+   // public void deposit(Account account, double amount){
+     //    this.accountBalance += amount;
+  //  }
+
+    public void deposit(double amount){
+        this.accountBalance += amount;
+    } //implicit parameter
      //transfer balance
 
-     public  void transferBalance( Account fromaccount, Account toaccount , double amountToBeTransfered){
+     public  void transferBalance(Account fromaccount , double amountToBeTransfered){
 
           //TODO "check if sufficient balance or not
-          fromaccount.setAccountBalance(fromaccount.getAccountBalance()-amountToBeTransfered);
-          toaccount.setAccountBalance(toaccount.getAccountBalance()+amountToBeTransfered);
+         fromaccount.setAccountBalance(fromaccount.getAccountBalance()-amountToBeTransfered);
+          this.setAccountBalance(this.getAccountBalance()+amountToBeTransfered);
 
      }
 
      //add interest
 
-    public void addinterest( Account account){
+//    public void addinterest( Account account){
+//
+//        double interest = (account.getAccountBalance() * 1 * INTEREST_RATE);
+//        System.out.println("Principle : " + account.getAccountBalance());
+//        System.out.println("Interest : " + interest);
+//        account.setAccountBalance((account.getAccountBalance() + interest));
+//        System.out.println("Account Balance : " + account.getAccountBalance());
+//    }
 
-        double interest = (account.getAccountBalance() * 1 * INTEREST_RATE);
-        System.out.println("Principle : " + account.getAccountBalance());
+    public void addinterest(){    //implicit parameter
+
+        double interest = (this.getAccountBalance() * 1 * INTEREST_RATE);
+        System.out.println("Principle : " + this.getAccountBalance());
         System.out.println("Interest : " + interest);
-        account.setAccountBalance((account.getAccountBalance() + interest));
-        System.out.println("Account Balance : " + account.getAccountBalance());
+        this.setAccountBalance((this.getAccountBalance() + interest));
+        System.out.println("Account Balance : " + this.getAccountBalance());
     }
 
 

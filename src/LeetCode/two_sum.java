@@ -29,6 +29,7 @@ class TwoSum {
         }
         int target = keyboard.nextInt();
 
+        
         keyboard.close();
 
         int[] indices = findTwoSum_BruteForce(nums, target);
